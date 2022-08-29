@@ -42,8 +42,8 @@ autocmd FileChangedShellPost *
 " => Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " Resize pane
-nmap <M-Right> :vertical resize +1<CR> 		
-nmap <M-Left> :vertical resize -1<CR>
+nmap <M-Left> :vertical resize +1<CR> 		
+nmap <M-Right> :vertical resize -1<CR>
 nmap <M-Down> :resize +1<CR>
 nmap <M-Up> :resize -1<CR>
 
@@ -56,7 +56,8 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 " (used for Vim-plug - https://github.com/junegunn/vim-plug)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin(stdpath('config').'/plugged')
-
+"Theme"
+	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 " File browser
 	Plug 'preservim/nerdTree' 						" File browser  
 	Plug 'Xuyuanp/nerdtree-git-plugin' 				" Git status
@@ -90,19 +91,27 @@ call plug#begin(stdpath('config').'/plugged')
 	Plug 'MaxMEllon/vim-jsx-pretty' 				" JSX/React
 	Plug 'jackguo380/vim-lsp-cxx-highlight'			" C++ syntax
 	Plug 'uiiaoo/java-syntax.vim' 					" Java
+	Plug 'neoclide/coc-yaml'                        " YAML
   
 " Debugging
 	Plug 'puremourning/vimspector' 					" Vimspector
 
 " Source code version control 
 	Plug 'tpope/vim-fugitive' 						" Git
+
+"Line Indent
+	Plug 'lukas-reineke/indent-blankline.nvim'
+
 call plug#end()
 
+
+" Set theme
+colorscheme tokyonight
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin Setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+let g:indentLine_setColors = 0
 " Overwrite some color highlight 
 "if (has("autocmd"))
 "	augroup colorextend
