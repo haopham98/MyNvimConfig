@@ -13,17 +13,17 @@ if has('win32')
 endif
 
 " Set color
-hi Floaterm guibg=Grey15
-hi FloatermBorder guifg=Orange guibg=DarkGreen
-"hi FloatermNC guibg=darkred
+" hi Floaterm guibg=Grey15
+" hi FloatermBorder guifg=Orange guibg=DarkGreen
+" hi FloatermNC guibg=darkred
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Hotkey to manage terminals
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Open a new terminal 
-nnoremap   <silent>   <F7>    :FloatermNew<CR>
-tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermNew<CR>
+" nnoremap   <silent>   <F7>    :FloatermNew<CR>
+" tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermNew<CR>
 
 " Kill current terminal 
 nnoremap <silent> 	<F10> 		:FloatermKill<CR>:FloatermPrev<CR>
@@ -48,6 +48,6 @@ tnoremap <silent> 	<leader>tf 		<C-\><C-n><C-W><Left>
 " => Hotkey to run other console apps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Git 
-nnoremap   <F8>    :FloatermNew --position=topright --height=0.5 --width=0.6 --autoclose=2 --title='Terminal' <CR>
+nnoremap   <F8>    :FloatermNew --position=topright --height=0.5 --width=0.7 --autoclose=2 --title='Terminal' <CR>
 
 
