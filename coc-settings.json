@@ -31,7 +31,6 @@
 				"default": "\uf29c"
 		},
 		"languageserver": {	
-				// C++
 				"ccls": {
 						"command": "ccls",
 						"filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
@@ -49,16 +48,7 @@
 								},
 								"highlight": {
 										"lsRanges": true
-								}//,
-								//"clang": {
-          			//		"resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0",
-          			//		"extraArgs": [
-								//				"-isystem",
-								//				"/Library/Developer/CommandLineTools/usr/include/c++/v1",
-								//				"-I",
-								//				"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"        
-          			//		]
-        				//}	
+								}
 						}
 				},
 				"cmake": {
@@ -70,12 +60,6 @@
 						"initializationOptions": {
 								"buildDirectory": "build"
 						}
-				}//,
-				//"haskell": {
-						//"command": "haskell-language-server-wrapper",
-						//"args": ["--lsp"],
-    					//"rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
-    					//"filetypes": ["haskell", "lhaskell"]
-				//}
-		}
+				}
+						}
 }
