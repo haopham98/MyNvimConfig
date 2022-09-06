@@ -50,6 +50,8 @@ nmap <M-Up> :resize -1<CR>
 " Search a hightlighted text
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
+" Mapping Visual and Search"
+" vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin list
