@@ -1,5 +1,5 @@
 let g:airline_powerline_fonts = 1 							" Enable font for status bar
-let g:airline_theme='base16_material_darker' 								" Set theme
+"let g:airline_theme='night_owl' 								" Set theme
 
 let g:airline#extensions#tabline#enabled = 1 				" Enable Tab bar
 let g:airline#extensions#tabline#left_sep = ' ' 			" Enable Tab seperator 

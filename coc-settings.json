@@ -51,15 +51,11 @@
 								}
 						}
 				},
-				"cmake": {
-						"command": "cmake-language-server",
-						"filetypes": ["cmake"],
-						"rootPatterns": [
-								"build/"
-						],
-						"initializationOptions": {
-								"buildDirectory": "build"
-						}
-				}
-						}
+				//"go": {
+				//		"command": "gopls",
+    			//		"rootPatterns": ["go.mod"],
+    			//		"trace.server": "verbose",
+    			//		"filetypes": ["go"]
+    			//	}
+		}
 }
