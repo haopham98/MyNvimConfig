@@ -60,6 +60,7 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 call plug#begin(stdpath('config').'/plugged')
 "Theme"
 	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
 " File browser
 	Plug 'preservim/nerdTree' 						" File browser  
 	Plug 'Xuyuanp/nerdtree-git-plugin' 				" Git status
@@ -104,22 +105,24 @@ call plug#begin(stdpath('config').'/plugged')
 "Line Indent
 	Plug 'lukas-reineke/indent-blankline.nvim'
 
+" Markdown plugin 
+	Plug 'godlygeek/tabular'
+	Plug 'preservim/vim-markdown'
+
 call plug#end()
-
-
 " Set theme
 " Example config in VimScript
 let g:tokyonight_style = "night"
+"let g:tokyonight_transparent= "true" "Set transparent background vim 
 let g:tokyonight_italic_functions = 1
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 
-" Change the "hint" color to the "orange" color, and make the "error" color bright red
+"Change the "hint" color to the "orange" color, and make the "error" color bright red
 let g:tokyonight_colors = {
-  \ 'hint': 'orange',
-  \ 'error': '#ff0000'
+\ 'hint': 'orange',
+\ 'error': '#ff0000'
 \ }
 colorscheme tokyonight
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin Setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -137,7 +140,8 @@ let g:indentLine_setColors = 0
 " Disable automatic comment in newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Other setting
+
+" " Other setting
 for setting_file in split(glob(stdpath('config').'/settings/*.vim'))
 	execute 'source' setting_file
 endfor
