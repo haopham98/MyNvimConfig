@@ -59,8 +59,7 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin(stdpath('config').'/plugged')
 "Theme"
-	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-
+	Plug 'ayu-theme/ayu-vim'
 " File browser
 	Plug 'preservim/nerdTree' 						" File browser  
 	Plug 'Xuyuanp/nerdtree-git-plugin' 				" Git status
@@ -112,17 +111,20 @@ call plug#begin(stdpath('config').'/plugged')
 call plug#end()
 " Set theme
 " Example config in VimScript
-let g:tokyonight_style = "night"
+"let g:tokyonight_style = "night"
 "let g:tokyonight_transparent= "true" "Set transparent background vim 
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-
+"let g:tokyonight_italic_functions = 1
+"let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+set termguicolors     " enable true colors support
+let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
 "Change the "hint" color to the "orange" color, and make the "error" color bright red
 let g:tokyonight_colors = {
 \ 'hint': 'orange',
 \ 'error': '#ff0000'
 \ }
-colorscheme tokyonight
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin Setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
