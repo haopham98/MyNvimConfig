@@ -142,6 +142,12 @@ let g:indentLine_setColors = 0
 " Disable automatic comment in newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+inoremap <silent><expr> <c-space> coc#refresh()
+
+let g:LanguageClient_serverCommands = {'terraform': ['terraform-ls', 'serve']}
+autocmd BufRead,BufNewFile *.tf set filetype=terraform
+autocmd BufRead,BufNewFile *.tfvars set filetype=terraform
+
 
 " " Other setting
 for setting_file in split(glob(stdpath('config').'/settings/*.vim'))
